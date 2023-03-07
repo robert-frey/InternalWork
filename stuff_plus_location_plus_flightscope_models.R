@@ -158,7 +158,6 @@ FS <- FS %>%
     h_mov_diff = round((((abs(pfxx)/avg_h_mov)-1)*50),2),
     v_mov_diff = round((((abs(pfxz)/avg_v_mov)-1)*50),2),
     stuff_plus = 100 + velo_diff + spin_diff + h_mov_diff + v_mov_diff,
-    stuff_plus = ifelse(pitch.type == "Curveball" & pitcher == "Alex Pribyl", 100 + velo_diff + spin_diff + v_mov_diff, stuff_plus),
     stuff_plus = round(stuff_plus,0),
     stuff_plus = ifelse(stuff_plus < 0,0,stuff_plus))
 
